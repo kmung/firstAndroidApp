@@ -5,5 +5,5 @@
     <string name="first_name_hint">First name</string>
     <string name="last_name_hint">Last name</string>
     <string name="button_display">Display</string>
-    <string name="welcome_message">Hello, %1$s!</string>
+    <string name="welcome_message">Good day, %1$s!</string>
 </resources>
