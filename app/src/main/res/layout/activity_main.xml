@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.1" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textViewName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -31,18 +31,32 @@
         app:layout_constraintTop_toBottomOf="@+id/textViewDisplay" />
 
     <EditText
-        android:id="@+id/editTextName"
+        android:id="@+id/editTextFirstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:ems="10"
-        android:hint="@string/name_hint"
+        android:ems="6"
+        android:hint="@string/first_name_hint"
+        android:importantForAutofill="no"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        app:layout_constraintBaseline_toBaselineOf="@id/textView"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        android:importantForAutofill="no" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewName"
+        app:layout_constraintStart_toEndOf="@+id/textViewName" />
+
+    <EditText
+        android:id="@+id/editTextLastName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="6"
+        android:hint="@string/last_name_hint"
+        android:importantForAutofill="no"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textViewName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toEndOf="@+id/textViewName" />
 
     <Button
         android:id="@+id/buttonDisplay"
@@ -52,6 +66,6 @@
         android:text="@string/button_display"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextFirstName" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

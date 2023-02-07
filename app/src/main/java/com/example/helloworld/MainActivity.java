@@ -29,16 +29,16 @@ public class MainActivity extends AppCompatActivity {
     // button display function
     private void initDisplayButton() {
         Button displayButton = findViewById(R.id.buttonDisplay);
-        displayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                EditText editName = findViewById(R.id.editTextName);
-                TextView textDisplay = findViewById(R.id.textViewDisplay);
-                String nameToDisplay = editName.getText().toString();
-                Resources res = getResources(); // asks the system for access to the value files
-                String displayString = res.getString(R.string.welcome_message, nameToDisplay); // creates the string with a message and name
-                textDisplay.setText(displayString);
-            }
+        displayButton.setOnClickListener(view -> {
+            // lambda replaces new View.onClickListener()
+            EditText editFirstName = findViewById(R.id.editTextFirstName);
+            EditText editLastName = findViewById(R.id.editTextLastName);
+            TextView textDisplay = findViewById(R.id.textViewDisplay);
+            String firstNameToDisplay = editFirstName.getText().toString();
+            String lastNameToDisplay = editLastName.getText().toString();
+            Resources res = getResources(); // asks the system for access to the value files
+            String displayString = res.getString(R.string.welcome_message, firstNameToDisplay + " " + lastNameToDisplay); // creates the string with a message and name
+            textDisplay.setText(displayString);
         });
     }
 }

@@ -2,7 +2,8 @@
     <string name="app_name">Hello World</string>
     <string name="hello_string">Hello World!</string>
     <string name="name_colon">Name:</string>
-    <string name="name_hint">Enter your name</string>
+    <string name="first_name_hint">First name</string>
+    <string name="last_name_hint">Last name</string>
     <string name="button_display">Display</string>
     <string name="welcome_message">Hello, %1$s!</string>
 </resources>
