@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private void initDisplayButton() {
         Button displayButton = findViewById(R.id.buttonDisplay);
         displayButton.setOnClickListener(view -> {
+            // lambda is the view -> function
             // lambda replaces new View.onClickListener()
             EditText editFirstName = findViewById(R.id.editTextFirstName);
             EditText editLastName = findViewById(R.id.editTextLastName);
